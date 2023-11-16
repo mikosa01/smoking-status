@@ -1,39 +1,17 @@
 from sklearn.pipeline import Pipeline
-import preprocessor as pp 
+from classification.processing import preprocessor as pp 
+from classification.config import config
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.neighbors import KNeighborsClassifier as knn
 
 
-DISCRETE_VARS =['age',
-                'height(cm)',
-                'eyesight(right)',
-                'hearing(left)',
-                'hearing(right)',
-                'Urine protein',
-                'dental caries']
-
-CONTINOUS_VARS = [  'weight(kg)',
-                    'waist(cm)',
-                    'eyesight(left)',
-                    'systolic',
-                    'relaxation',
-                    'fasting blood sugar',
-                    'Cholesterol',
-                    'triglyceride',
-                    'HDL',
-                    'LDL',
-                    'hemoglobin',
-                    'serum creatinine',
-                    'AST',
-                    'ALT',
-                    'Gtp']
 
 
 smoke_status = Pipeline(
     [
-        ('LogTransformation', pp.LogTransformation(variable = CONTINOUS_VARS)), 
-        ('NumericalImputer', pp.NumericImputer(variable= [CONTINOUS_VARS, DISCRETE_VARS])), 
+        ('LogTransformation', pp.LogTransformation(variable = config.CONTINOUS_VARS)), 
+        ('NumericalImputer', pp.NumericImputer(variable= config.FEATURES)), 
         ('MinMaxScaler', MinMaxScaler()), 
-        ('K-NearestNeighbor', knn(n_neighbors= 4))
+        (config.MODEL_NAME, knn(n_neighbors= 4))
     ]
 )
