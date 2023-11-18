@@ -60,4 +60,5 @@ CONTINOUS_VARS = [  'weight(kg)',
                     'ALT',
                     'Gtp']
 
-MODEL_NAME = 'K-NEAREST NEIGHBOR CLASSIFIER'
+MODEL_NAME = 'K-NEAREST_NEIGHBOR_CLASSIFIER'
+PIPELINE_SAVE_FILE = f"{MODEL_NAME}_output_v"

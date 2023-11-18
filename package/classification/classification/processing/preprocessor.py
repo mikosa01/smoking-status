@@ -2,6 +2,7 @@ import typing as t
 import pandas as pd 
 import numpy as np 
 from sklearn.base import BaseEstimator, TransformerMixin
+from classification.processing.error import InvalidModelInputError
 
 class NumericImputer(BaseEstimator, TransformerMixin):
     def __init__(self, variable: t.List[str]=None) -> None: 
