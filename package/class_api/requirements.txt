@@ -1,0 +1,5 @@
+flask>=1.1.1
+
+marshmallow >=2.17.0
+
+-e '/Users/mikosa/Smoking_Status/package/classification'

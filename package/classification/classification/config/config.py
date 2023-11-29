@@ -44,21 +44,21 @@ DISCRETE_VARS =['age',
                 'Urine protein',
                 'dental caries']
 
-CONTINOUS_VARS = [  'weight(kg)',
-                    'waist(cm)',
-                    'eyesight(left)',
-                    'systolic',
-                    'relaxation',
-                    'fasting blood sugar',
-                    'Cholesterol',
-                    'triglyceride',
-                    'HDL',
-                    'LDL',
-                    'hemoglobin',
-                    'serum creatinine',
-                    'AST',
-                    'ALT',
-                    'Gtp']
+CONTINOUS_VARS = ['weight(kg)',
+                  'waist(cm)',
+                  'eyesight(left)',
+                  'systolic',
+                  'relaxation',
+                  'fasting blood sugar',
+                  'Cholesterol',
+                  'triglyceride',
+                  'HDL',
+                  'LDL',
+                  'hemoglobin',
+                  'serum creatinine',
+                  'AST',
+                  'ALT',
+                  'Gtp']
 
 MODEL_NAME = 'K-NEAREST_NEIGHBOR_CLASSIFIER'
 PIPELINE_SAVE_FILE = f"{MODEL_NAME}_output_v"
