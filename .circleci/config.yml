@@ -19,6 +19,6 @@ jobs :
 
 workflow:
   version: 2 
-    test-all : 
-      job : 
-        - test_classification_model
+  test-all : 
+    job : 
+      - test_classification_model
