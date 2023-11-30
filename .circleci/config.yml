@@ -2,13 +2,13 @@ version : 2
 jobs : 
   test_classification_model: 
     working_directory: ~/project 
-    docker : 
-        - image: circleci/python:3.9
-        steps: 
-          - checkout 
-          - run : 
-            name : Running Tests
-            command : 
+    docker: 
+      - image: circleci/python:3.9
+    steps: 
+      - checkout 
+      - run : 
+          name : Running Tests
+            command : |
               virtaulenv venv
               . venv/bin/activate 
               pip install --upgrade pip
