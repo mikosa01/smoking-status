@@ -3,19 +3,19 @@ jobs :
   test_classification_model: 
     working_directory: ~/project 
     docker : 
-      - image: circleci/python:3.9
-      steps: 
-        - checkout 
-        - run : 
-          name : Running Tests
-          command : 
-            virtaulenv venv
-            . venv/bin/activate 
-            pip install --upgrade pip
-            pip install -r package/classification/requirements.txt
-            chmod +x ./script/fetch_kaggle_dataset.sh
-            ./scripts/fetch_kaggle_dataset.sh
-            py.test -vv package/classification/tests
+        - image: circleci/python:3.9
+        steps: 
+          - checkout 
+          - run : 
+            name : Running Tests
+            command : 
+              virtaulenv venv
+              . venv/bin/activate 
+              pip install --upgrade pip
+              pip install -r package/classification/requirements.txt
+              chmod +x ./script/fetch_kaggle_dataset.sh
+              ./scripts/fetch_kaggle_dataset.sh
+              py.test -vv package/classification/tests
 
 workflow:
   version: 2 
