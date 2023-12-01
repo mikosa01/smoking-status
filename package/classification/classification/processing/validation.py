@@ -1,5 +1,5 @@
 import pandas as pd 
-from classification.config import config
+from package.classification.classification.config import config
 
 
 def validate_input(*, input_data: pd.DataFrame) -> pd.DataFrame: 

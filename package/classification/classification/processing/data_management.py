@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np 
 import joblib
 from sklearn.pipeline import Pipeline
-from classification.config import config
+from package.classification.classification.config import config
 from classification.pipeline import smoke_status
 import logging 
 from classification import __version__ as _version
