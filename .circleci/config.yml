@@ -13,6 +13,8 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install -r package/classification/requirements.txt
+            chmod +x ./script/fetch_kaggle_dataset.sh
+            ./scripts/fetch_kaggle_dataset.sh
 
   test_classification_model:
     working_directory: ~/project
@@ -23,13 +25,10 @@ jobs:
       - run:
           name: Running Tests
           command: |
-            chmod +x ./script/fetch_kaggle_dataset.sh
-            ./scripts/fetch_kaggle_dataset.sh
             py.test -vv package/classification/tests
 
 workflows:
-  version: 2
-  test-all:
+  build_and_test:
     jobs:
       - build
       - test_classification_model: 
