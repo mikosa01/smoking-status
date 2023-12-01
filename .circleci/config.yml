@@ -14,7 +14,7 @@ jobs:
             pip install --upgrade pip
             pip install -r package/classification/requirements.txt
             chmod +x ./script/fetch_kaggle_dataset.sh
-            ./scripts/fetch_kaggle_dataset.sh
+            ./script/fetch_kaggle_dataset.sh
 
   test_classification_model:
     working_directory: ~/project
