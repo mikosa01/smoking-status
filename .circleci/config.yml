@@ -25,7 +25,7 @@ jobs:
             pip install -r package/classification/requirements.txt
             chmod +x ./script/fetch_kaggle_dataset.sh
             ./script/fetch_kaggle_dataset.sh
-            pytest -vv package/classification/classification/tests
+            pytest -vv package/classification/tests
 
 workflows:
   version: 2
