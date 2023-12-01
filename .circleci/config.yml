@@ -33,5 +33,5 @@ workflows:
     jobs:
       - build
       - test_classification_model: 
-          require: 
+          requires: 
             build 
