@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Running Tests
           command: |
-            py.test -vv package/classification/classification/tests
+            pytest -vv package/classification/classification/tests
 
 workflows:
   version: 2
