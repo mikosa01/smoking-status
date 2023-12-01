@@ -1,8 +1,10 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
-kaggle competitions download -c playground-series-s3e24 -p
-package/classification/classification/dataset/
+# Set the path where you want to download the dataset
+download_path="package/classification/classification/dataset/"
 
+# Download the Kaggle dataset to the specified path
+kaggle competitions download -c playground-series-s3e24 -p "$download_path"
 
-
-unzip package/classification/classification/dataset/playground-series-s3e24.zip -d package/classification/classification/dataset
+# Unzip the downloaded file
+unzip "${download_path}playground-series-s3e24.zip" -d "$download_path"
