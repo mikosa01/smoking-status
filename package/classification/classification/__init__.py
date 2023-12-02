@@ -5,6 +5,7 @@ from classification.config import logging_config
 
 VERSION_PATH = config.PACKAGE_ROOT / 'VERSION'
 
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 logger.addHandler(logging_config.get_console_handler())

@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/project
+    docker:
+      - image: circleci/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: Building Project
+          command: |
+            virtualenv venv
+            . venv/bin/activate
+
+  test_classification_model:
+    working_directory: ~/project
+    docker:
+      - image: circleci/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: Running Tests
+          command: |
+            virtualenv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install -r package/classification/requirements.txt
+            chmod +x ./script/fetch_kaggle_dataset.sh
+            ./script/fetch_kaggle_dataset.sh
+            pytest -vv package/classification/tests
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test_classification_model:
+          requires:
+            - build
