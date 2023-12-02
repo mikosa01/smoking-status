@@ -1,6 +1,6 @@
 from sklearn.pipeline import Pipeline
 from classification.processing import preprocessor as pp 
-from package.classification.classification.config import config
+from classification.config import config
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.neighbors import KNeighborsClassifier as knn
 import logging

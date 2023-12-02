@@ -19,10 +19,5 @@ def test_prediction_endpoint_validate(flask_test_client):
     assert response.status_code == 200
     response_json = json.loads(response.data)
 
-    # Check correct number of errors removed
-    # assert len(response_json.get('predictions')) + len(response_json.get('errors')) == len(test_data)
-
-
-
 
     
