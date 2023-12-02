@@ -25,7 +25,6 @@ jobs:
             . venv/bin/activate
             pip install --upgrade pip
             pip install -r package/classification/requirements.txt
-            echo 'export PYTHONPATH=$PYTHONPATH:/home/circleci/project' >> $BASH_ENV && source $BASH_ENV
             chmod +x ./script/fetch_kaggle_dataset.sh
             ./script/fetch_kaggle_dataset.sh
             pytest -vv package/classification/tests
