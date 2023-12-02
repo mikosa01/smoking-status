@@ -21,8 +21,8 @@ jobs:
       - run:
           name: Running Tests
           command: |
-            virtualeb=nv venv
-            . vene/bin/activate
+            virtualenv venv
+            . venv/bin/activate
             pip install --upgrade pip
             pip install -r package/classification/requirements.txt
             echo 'export PYTHONPATH=$PYTHONPATH:/home/circleci/project' >> $BASH_ENV && source $BASH_ENV
