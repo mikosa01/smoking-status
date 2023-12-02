@@ -3,7 +3,7 @@ import json
 import pandas as pd 
 
 from classification.processing.data_management import load_pipeline
-from package.classification.classification.config import config
+from classification.config import config
 from classification.processing.validation import validate_input
 from classification import __version__ as version
 import logging
