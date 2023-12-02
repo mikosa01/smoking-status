@@ -1,6 +1,6 @@
 import math
 
-from package.classification.classification.predict import make_prediction
+from classification.predict import make_prediction
 from classification.processing.data_management import load_data
 
 def test_make_prediction(): 
