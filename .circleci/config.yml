@@ -47,7 +47,7 @@ jobs:
   train_upload_classification_model: 
     working_directory: ~/project
     docker: 
-      - image: circleci/python3.9
+      - image: circleci/python:3.9
     steps: 
       - checkout
       - run: 
