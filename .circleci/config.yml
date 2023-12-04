@@ -69,6 +69,7 @@ workflows:
   build_and_test:
     jobs:
       - build
+      - test_classification_model
       - test_ml_api
       - train_upload_classification_model
       - test_classification_model:
