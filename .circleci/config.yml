@@ -59,7 +59,7 @@ jobs:
       - run: 
           name: Publish model 
           command: |
-            .venv/bin/activate 
+            . venv/bin/activate 
             chmod +x ./script/fetch_kaggle_dataset.sh ./script/publish_model.sh
             ./script/fetch_kaggle_dataset.sh
             PYTHONPATH=./package/classification python3 package/classification/classification/train_pipeline.py
