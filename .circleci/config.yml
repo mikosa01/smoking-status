@@ -108,7 +108,7 @@ workflows:
       - train_upload_classification_model
       - train_upload_classification_model: 
           requires: 
-            - build 
+            # - build 
             - test_classification_model
             - test_ml_api
             filters: 
