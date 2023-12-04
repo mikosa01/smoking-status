@@ -41,7 +41,7 @@ jobs:
             virtualenv venv 
             . venv/bin/activate 
             pip install --upgrade pip 
-            pip install -r package/class_api/requirments.txt
+            pip install -r package/class_api/requirements.txt
             py.test -vv package/class_api/tests
   
   train_upload_classification_model: 
