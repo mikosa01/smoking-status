@@ -78,7 +78,7 @@ workflows:
       - test_ml_api: 
           requires: 
             - build 
-            - train_upload_classication_model
+            - train_upload_classification_model
       - train_upload_classification_model: 
           requires: 
             - build 
