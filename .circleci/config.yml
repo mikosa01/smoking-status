@@ -29,11 +29,57 @@ jobs:
             ./script/fetch_kaggle_dataset.sh
             pytest -vv package/classification/tests
 
+  test_ml_api:
+    working_directory: ~/project
+    docker : 
+      - image: circleci/python:3.9
+    steps: 
+      - checkout 
+      - run: 
+          name: Running Tests 
+          command: | 
+            virtualenv venv 
+            . venv/bin/activate 
+            pip install --upgrade pip 
+            pip install -r package/class_api/requirements.txt
+            py.test -vv package/class_api/tests
+  
+  train_upload_classification_model: 
+    working_directory: ~/project
+    docker: 
+      - image: circleci/python:3.9
+    steps: 
+      - checkout
+      - run: 
+          name : Setup Env
+          command: | 
+            virtualenv venv 
+            . venv/bin/activate 
+            pip install -r package/classification/requirements.txt
+      - run: 
+          name: Publish model 
+          command: |
+            . venv/bin/activate 
+            chmod +x ./script/fetch_kaggle_dataset.sh ./script/publish_model.sh
+            ./script/fetch_kaggle_dataset.sh
+            PYTHONPATH=./package/classification python3 package/classification/classification/train_pipeline.py
+            ./script/publish_model.sh ./package/classification/  
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
+      - test_classification_model
+      - test_ml_api
+      - train_upload_classification_model
       - test_classification_model:
           requires:
             - build
+      - test_ml_api: 
+          requires: 
+            - build 
+            - train_upload_classification_model
+      - train_upload_classification_model: 
+          requires: 
+            - build 
+          
