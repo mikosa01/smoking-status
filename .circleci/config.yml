@@ -90,7 +90,6 @@ jobs:
           command: |
             . venv/bin/activate 
             PYTHONPATH=./package/classification python3 package/classification/classification/train_pipeline.py
-            ./script/publish_model.sh ./package/classification/  
       - run: 
           name: Publish model to Gemfury
           command: | 
@@ -111,4 +110,8 @@ workflows:
             - build
             - test_classification_model
             - test_ml_api
+          filters:
+            branches: 
+              only: 
+                - master
           
