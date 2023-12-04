@@ -55,7 +55,7 @@ jobs:
           command: | 
             virtualenv venv 
             . venv/bin/activate 
-            pip install -r packages/classification/requirements.txt
+            pip install -r package/classification/requirements.txt
       - run: 
           name: Publish model 
           command: |
