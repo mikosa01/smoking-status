@@ -1,5 +1,7 @@
+--extra-index-url=${PIP_EXTRA_INDEX_URL}
+
 flask>=1.1.1
 
 marshmallow >=2.17.0
 
--e '/Users/mikosa/Smoking_Status/package/classification'
+classification==0.1.0
