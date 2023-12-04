@@ -17,7 +17,7 @@ AUTHOR = 'Michael Okungbowa'
 REQUIRES_PYTHON = '>=3.6.0'
 
 
-def list_reqs(fname='/Users/mikosa/Smoking_Status/package/classification/requirements.txt'):
+def list_reqs(fname='requirements.txt'):
     with open(fname) as fd:
         return fd.read().splitlines()
 
