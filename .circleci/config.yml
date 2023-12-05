@@ -41,7 +41,6 @@ jobs:
           command: |
             . venv/bin/activate
             pip install -r package/classification/requirements.txt
-            pytest -vv package/classification/tests
       - *fetch_data
       - run: 
           name: Train  Model
@@ -68,7 +67,7 @@ jobs:
             . venv/bin/activate 
             pip install --upgrade pip 
             pip install -r package/class_api/requirements.txt
-            py.test -vv package/class_api/tests
+            py.test -vv package/class_api/tests -m 'not differential'
       - save_cache:
           key: py-deps-{{ checksum "package/class_api/requirements.txt"}}
           paths: 
@@ -97,6 +96,24 @@ jobs:
             chmod +x ./script/publish_model.sh
             ./script/publish_model.sh ./package/classification/
 
+  differential_test: 
+    <<: *defaults
+    steps: 
+      - checkout 
+      - *prepare_venv
+      - run: 
+          name : Capturing previous model predictions 
+          command: | 
+            . venv/bin/activate
+            pip install -r package/class_api/requirements.txt
+            PYTHONPATH=./package/class_api python3 package/class_api/tests/differential_tests/capture_model_predictions.py
+      - run: 
+          name: Running Differential Tests
+          command: | 
+            . venv/bin/activate
+            pip install -r package/class_api/requirements.txt
+            py.test -vv package/class_api/tests -m differential
+
 workflows:
   version: 2
   build_and_test:
@@ -105,11 +122,13 @@ workflows:
       - test_classification_model
       - test_ml_api
       - train_upload_classification_model
+      - differential_test
       - train_upload_classification_model: 
           requires: 
             - build
             - test_classification_model
             - test_ml_api
+            - differential_test
           filters:
             branches: 
               only: 
