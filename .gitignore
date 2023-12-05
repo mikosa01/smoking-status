@@ -4,3 +4,13 @@
 
 package/classification/classification/dataset/*.csv
 package/classification/classification/dataset/*.zip
+package/classification/classification/dataset/*.txt
+
+train.csv
+test.csv
+test_data_predictions.csv
+
+logs/
+
+
+package/classification/classification/trained_model/*.pkl
