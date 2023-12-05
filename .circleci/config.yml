@@ -107,7 +107,7 @@ jobs:
           command: | 
             . venv/bin/activate
             pip install -r package/class_api/requirements.txt
-            PYTHONPATH=./package/class_api python3 package/class_api/tests/capture_model_predictions.py
+            PYTHONPATH=./package/class_api python3 package/class_api/tests/differential_tests/capture_model_predictions.py
       - run: 
           name: Running Differential Tests
           command: | 
