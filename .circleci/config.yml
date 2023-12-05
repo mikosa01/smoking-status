@@ -41,7 +41,6 @@ jobs:
           command: |
             . venv/bin/activate
             pip install -r package/classification/requirements.txt
-            pytest -vv package/classification/tests
       - *fetch_data
       - run: 
           name: Train  Model

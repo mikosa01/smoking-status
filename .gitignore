@@ -13,4 +13,4 @@ test_data_predictions.csv
 logs/
 
 
-# package/classification/classification/trained_model/*.pkl
+package/classification/classification/trained_model/*.pkl
