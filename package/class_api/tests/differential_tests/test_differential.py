@@ -22,7 +22,7 @@ def test_model_prediction_differential(
     current_model_predictions = response.get('predictions')
 
     #Then 
-    # assert len(previous_model_prediction) == len(current_model_predictions)
+    assert len(previous_model_prediction) == len(current_model_predictions)
 
     for previous_value, current_value in zip(previous_model_prediction, current_model_predictions): 
 
