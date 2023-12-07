@@ -19,7 +19,7 @@ def test_model_prediction_differential(
 
     #When
     response = make_prediction(filename=multiple_test_json)
-    current_model_predictions = response.get('predictions')
+    current_model_predictions = response.get('prediction')
 
     #Then 
     assert previous_model_prediction is not None, "Previous model predictions are None"
