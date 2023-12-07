@@ -13,7 +13,7 @@ def test_model_prediction_differential(
 
     # Given
     previous_model_df = load_data(file_name='test_data_prediction.csv')
-    previous_model_prediction = previous_model_df['predictions'].values 
+    previous_model_prediction = previous_model_df['prediction'].values 
     test_data = load_data(file_name='test.csv')
     multiple_test_json = test_data[90:600]
 
