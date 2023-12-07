@@ -1,0 +1,46 @@
+[{
+        "id": 7000, 
+        "age" : 89, 
+        "height(cm)" : 160,
+        "weight(kg)" :70,
+        "waist(cm)" : 85.0, 
+        "eyesight(left)":0.8,
+        "eyesight(right)":0.9,
+        "hearing(left)":1, 
+        "hearing(right)" : 1, 
+        "systolic" : 170, 
+        "relaxation" : 90, 
+        "fasting blood sugar" : 70,
+        "Cholesterol" : 199, 
+        "triglyceride": 310	, 
+        "HDL" : 50, 
+        "LDL" : 90,	
+        "hemoglobin" : 20.5,
+        "Urine protein" : 1, 
+        "serum creatinine" : 1.0, 	
+        "AST" :28, 
+        "ALT" : 28, 
+        "Gtp":34, 
+        "dental caries":1
+    }
+]
+
+	
+	
+
+
+	
+
+
+	
+	
+
+
+
+
+	
+	
+
+	
+	
+

@@ -7,7 +7,6 @@ from classification.processing.data_management import load_data
 from api import config
 
 
-@pytest.mark.skip
 @pytest.mark.differential
 def test_model_prediction_differential(
     *, save_file: str='test_data_prediction.csv'):
