@@ -1,0 +1,9 @@
+jupyter
+*/env*
+*/venv*
+.circleci*
+package/classification
+*.env
+*.log
+.git
+.gitignore
