@@ -11,7 +11,7 @@ ADD ./package/class_api /opt/class_api/
 
 RUN pip install --upgrade pip 
 # COPY requirements.txt /opt/class_api/
-RUN pip install -r /opt/class_api_api/requirements.txt
+RUN pip install -r /opt/class_api/requirements.txt
 
 RUN chmod +x /opt/class_api/run.sh
 RUN chown -R ml-api-user:ml-api-user ./
