@@ -145,7 +145,7 @@ jobs:
       - run: 
           name: Release to Heroku
           command: | 
-            heroku container:release web
+            echo "$HEROKU_APP_NAME" | heroku container:release web --app
 
 workflows:
   version: 2
