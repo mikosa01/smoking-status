@@ -140,7 +140,7 @@ jobs:
             wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
       - run:
           name: Print Environment Variables
-          command: echo "HEROKU_APP_NAME: $HEROKU_APP_NAME"
+          command: echo "HEROKU_APP_NAME:$HEROKU_APP_NAME"
       - run: 
           name: Build and Push image 
           command: |
