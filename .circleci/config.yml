@@ -142,7 +142,7 @@ jobs:
           command: heroku auth:whoami
       - run:
           name: Print Environment Variables
-          command: echo "HEROKU_APP_NAME: $HEROKU_APP_NAME"
+          command: echo "HEROKU_APP_NAME:$HEROKU_APP_NAME"
       - run: 
           name: Setup Heroku CLI
           command: |
