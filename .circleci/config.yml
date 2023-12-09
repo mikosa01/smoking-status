@@ -139,9 +139,11 @@ jobs:
           command: |
             wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
       - run:
+          name: Check Heroku CLI version
+          command: heroku --version
+      - run:
           name: Check Heroku Authentication
           command: heroku auth:whoami
-
       - run:
           name: Print Environment Variables
           command: echo "HEROKU_APP_NAME:$HEROKU_APP_NAME"
