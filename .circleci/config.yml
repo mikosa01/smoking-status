@@ -134,15 +134,6 @@ jobs:
           name: Docker Login
           command: |
            echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
-      - run:
-          name: Check Heroku CLI version
-          command: heroku --version
-      - run:
-          name: Check Heroku Authentication
-          command: heroku auth:whoami
-      - run:
-          name: Print Environment Variables
-          command: echo "HEROKU_APP_NAME:$HEROKU_APP_NAME"
       - run: 
           name: Setup Heroku CLI
           command: |
@@ -154,7 +145,7 @@ jobs:
       - run: 
           name: Release to Heroku
           command: | 
-            echo "HEROKU_APP_NAME:$HEROKU_APP_NAME"
+            echo "HEROKU_APP_NAME: $HEROKU_APP_NAME"
             heroku container:release web --app $HEROKU_APP_NAME
 
 workflows:
