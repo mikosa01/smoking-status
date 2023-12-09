@@ -9,7 +9,7 @@ ENV FLASK_APP run.py
 
 ADD ./package/class_api /opt/class_api/
 RUN pip install --upgrade pip 
-COPY ./package/class_api/requirements.txt /opt/class_api/
+# COPY requirements.txt /opt/class_api/
 RUN pip install -r /opt/ml_api/requirements.txt
 
 RUN chmod +x /opt/ml_api/run.sh
@@ -19,4 +19,4 @@ USER  ml-api-user
 
 EXPOSE 5000
 
-CMD ['bash', './run.sh']
+CMD ["bash", "./run.sh"]
