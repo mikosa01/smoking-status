@@ -134,7 +134,7 @@ jobs:
       #     name: Docker Login
       #     command: |
       #      echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
-      # - run: 
+      - run: 
           name: Setup Heroku CLI
           command: |
             wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
