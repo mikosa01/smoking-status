@@ -4,5 +4,9 @@ COMMIT_ID=$(shell git rev-parse HEAD)
 build-ml-api-heroku: 
 	docker build --build-arg PIP_EXTRA_INDEX_URL=${PIP_EXTRA_INDEX_URL} -t registry.heroku.com/$(HEROKU_APP_NAME)/web:$(COMMIT_ID) .
 
+	@echo "HEROKU_APP_NAME: $(HEROKU_APP_NAME)"
+	@echo "HEROKU_API_KEY: $(HEROKU_API_KEY)"
+	@echo "COMMIT_ID: $(COMMIT_ID)"
+
 push-ml-api-heroku:
 	docker push registry.heroku.com/$(HEROKU_APP_NAME)/web:$(COMMIT_ID)
