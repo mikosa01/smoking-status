@@ -1,6 +1,7 @@
 import pandas as pd 
 from classification.predict import make_prediction
 from classification.processing.data_management import load_data
+from classification.config import config as model_config
 
 from api import config
 
@@ -16,7 +17,7 @@ def capture_predictions():
     prediction_df = pd.DataFrame(predictions)
 
     prediction_df.to_csv(
-        f'{config.PACKAGE_ROOT.parent}/{save_file}'      
+        f'{model_config.DATASET_DIR}/{save_file}'      
                 )
     
 

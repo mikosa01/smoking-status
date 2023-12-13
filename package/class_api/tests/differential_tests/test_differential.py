@@ -7,22 +7,24 @@ from classification.processing.data_management import load_data
 from api import config
 
 
-@pytest.mark.skip
 @pytest.mark.differential
 def test_model_prediction_differential(
     *, save_file: str='test_data_prediction.csv'):
 
     # Given
     previous_model_df = load_data(file_name='test_data_prediction.csv')
-    previous_model_prediction = previous_model_df.predictions.values 
+    previous_model_prediction = previous_model_df['prediction'].values 
     test_data = load_data(file_name='test.csv')
     multiple_test_json = test_data[90:600]
 
     #When
     response = make_prediction(filename=multiple_test_json)
-    current_model_predictions = response.get('predictions')
+    current_model_predictions = response.get('prediction')
 
     #Then 
+    assert previous_model_prediction is not None, "Previous model predictions are None"
+    assert current_model_predictions is not None, "Current model predictions are None"
+
     assert len(previous_model_prediction) == len(current_model_predictions)
 
     for previous_value, current_value in zip(previous_model_prediction, current_model_predictions): 
