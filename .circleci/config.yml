@@ -16,15 +16,20 @@ fetch_data: &fetch_data
   run: 
     name: Set script permission and fetch data 
     command: | 
+      source venv/bin/activate
       chmod +x ./script/fetch_kaggle_dataset.sh
       ./script/fetch_kaggle_dataset.sh
-
 jobs:
   build:
     <<: *defaults
     steps:
       - checkout
       - *prepare_venv
+      - run:
+          name: Building Project
+          command: |
+            virtualenv venv
+            . venv/bin/activate
 
   test_classification_model:
     <<: *defaults
@@ -34,15 +39,18 @@ jobs:
       - run:
           name: Install requirements
           command: |
+            . venv/bin/activate
             pip install -r package/classification/requirements.txt
       - *fetch_data
       - run: 
           name: Train  Model
           command: |
+            . venv/bin/activate
             PYTHONPATH=./package/classification python3 package/classification/classification/train_pipeline.py
       - run: 
           name: Run Tests
           command: | 
+            . venv/bin/activate 
             py.test -vv package/classification/tests
 
   test_ml_api:
@@ -55,13 +63,16 @@ jobs:
       - run: 
           name: Running Tests 
           command: | 
+            virtualenv venv 
+            . venv/bin/activate 
+            pip install --upgrade pip 
             pip install -r package/class_api/requirements.txt
             py.test -vv package/class_api/tests -m 'not differential'
       - save_cache:
           key: py-deps-{{ checksum "package/class_api/requirements.txt"}}
           paths: 
-            - "venv"
-
+            - "/venv"
+  
   train_upload_classification_model: 
     <<: *defaults
     steps: 
@@ -70,15 +81,18 @@ jobs:
       - run: 
           name : Install requirements
           command: | 
+            . venv/bin/activate 
             pip install -r package/classification/requirements.txt
       - *fetch_data
       - run: 
           name: Train model 
           command: |
+            . venv/bin/activate 
             PYTHONPATH=./package/classification python3 package/classification/classification/train_pipeline.py
       - run: 
           name: Publish model to Gemfury
           command: | 
+            . venv/bin/activate 
             chmod +x ./script/publish_model.sh
             ./script/publish_model.sh ./package/classification/
 
@@ -90,54 +104,15 @@ jobs:
       - run: 
           name : Capturing previous model predictions 
           command: | 
+            . venv/bin/activate
             pip install -r package/class_api/requirements.txt
             PYTHONPATH=./package/class_api python3 package/class_api/tests/differential_tests/capture_model_predictions.py
       - run: 
           name: Running Differential Tests
           command: | 
+            . venv/bin/activate
             pip install -r package/class_api/requirements.txt
             py.test -vv package/class_api/tests -m differential
-
-  # deploy_to_heroku:
-  #   <<: *defaults
-  #   steps: 
-  #     - checkout 
-  #     - run: 
-  #         name: Deploy to Heroku
-  #         command: |
-  #           git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
-
-  # build_push_docker_heroku:
-  #   <<: *defaults
-  #   steps: 
-  #     - checkout 
-  #     - setup_remote_docker: 
-  #         docker_layer_caching: true
-  #     - run: 
-  #         name: Docker Login
-  #         command: |
-  #           echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
-  #     - run: 
-  #         name: Setup Heroku CLI
-  #         command: |
-  #           wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-  #     - run:
-  #         name: Check Heroku CLI version
-  #         command: heroku --version
-  #     - run:
-  #         name: Check Heroku Authentication
-  #         command: heroku auth:whoami
-  #     - run:
-  #         name: Print Environment Variables
-  #         command: echo "HEROKU_APP_NAME:$HEROKU_APP_NAME"
-  #     - run: 
-  #         name: Build and Push image 
-  #         command: |
-  #           make build-ml-api-heroku push-ml-api-heroku
-  #     # - run: 
-  #     #     name: Release to Heroku
-  #     #     command: | 
-  #     #       heroku container:release web --app $HEROKU_APP_NAME
 
   build_push_docker_heroku:
     <<: *defaults
@@ -168,7 +143,8 @@ workflows:
       - test_ml_api
       - train_upload_classification_model
       - differential_test
-      - deploy_to_heroku:
+      - build_push_docker_heroku
+      - train_upload_classification_model: 
           requires: 
             - build
             - test_classification_model
@@ -181,3 +157,4 @@ workflows:
             branches: 
               only: 
                 - master
+          
