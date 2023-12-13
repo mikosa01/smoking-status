@@ -4,6 +4,6 @@ flask>=1.1.1
 
 marshmallow >=2.17.0
 
-classification==1.0.0
+classification>=1.0.0
 
 gunicorn>=19.9.0
