@@ -129,10 +129,10 @@ jobs:
           name: Build and Push Docker image 
           command: |
             make build-ml-api-heroku
-      - run: 
-          name: Release to Heroku
-          command: | 
-            heroku container:release web --app $HEROKU_APP_NAME
+      # - run: 
+      #     name: Release to Heroku
+      #     command: | 
+      #       heroku container:release web --app $HEROKU_APP_NAME
 
 workflows:
   version: 2
