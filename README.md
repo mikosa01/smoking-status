@@ -9,7 +9,8 @@
 ![GitHub](https://img.shields.io/github/license/mikosa01/smoking-status)
 ![contributors](https://img.shields.io/github/contributors/mikosa01/smoking-status) 
 ![codesize](https://img.shields.io/github/languages/code-size/mikosa01/smoking-status)
-![Docker Stars](https://img.shields.io/docker/stars/mikosa01/smoking-status)
+[![Docker Stars](https://img.shields.io/docker/stars/circleci/python)](https://hub.docker.com/r/circleci/python)
+
 ![CircleCI](https://img.shields.io/circleci/build/github/mikosa01/smoking-status)
 
 
@@ -21,12 +22,13 @@ The primary goal of this project is to develop a robust predictive model for det
 To run this project locally, follow these steps:
 
 - Clone the Repository:
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/mikosa01/smoking-status.git
     cd your-repo
 
 - Create Virtual Environment (Optional but Recommended):
     python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    source venv/bin/activate  
+   On Windows, use `venv\Scripts\activate`
 
 - Install Dependencies:
     pip install -r requirements.txt
