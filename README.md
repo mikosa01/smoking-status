@@ -22,7 +22,7 @@
 
 - Clone the Repository:
     `git clone https://github.com/mikosa01/smoking-status.git`
-    `cd your-repo`
+    `cd smoking-status`
 
 - Create Virtual Environment (Optional but Recommended):
     `python -m venv venv`
