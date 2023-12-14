@@ -11,8 +11,7 @@
 ![codesize](https://img.shields.io/github/languages/code-size/mikosa01/smoking-status)
 [![Docker Stars](https://img.shields.io/docker/stars/circleci/python)](https://hub.docker.com/r/circleci/python)
 [[![Gem Version](https://badge.fury.io/rb/gemfury.svg)](https://badge.fury.io/rb/gemfury)
-[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/master)
-
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/main.svg?style=svg&circle-token=cb047bd7bf65fea1735ff4c3e2ba11eaca838bb1)](https://dl.circleci.com/status-badge/redirect/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/main)
 
 
 
