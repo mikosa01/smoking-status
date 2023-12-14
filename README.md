@@ -32,7 +32,7 @@ To run this project locally, follow these steps:
    
    `On Windows: ` 
     
-    venv\Scripts\activate`
+    venv\Scripts\activate
 
 `Install Dependencies in the various requirments text files:`
 
