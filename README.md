@@ -6,11 +6,11 @@
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/mikosa01/smoking-status?include_prereleases&cache=busting-parameter)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mikosa01/smoking-status)
 ![GitHub open pull requests](https://img.shields.io/github/issues-pr/mikosa01/smoking-status?state=open)
-![GitHub](https://img.shields.io/github/license/mikosa01/smoking-status)
+[![GitHub](https://img.shields.io/github/license/mikosa01/smoking-status?nocache=1)](https://img.shields.io/github/license/mikosa01/smoking-status)
 ![contributors](https://img.shields.io/github/contributors/mikosa01/smoking-status) 
 ![codesize](https://img.shields.io/github/languages/code-size/mikosa01/smoking-status)
 [![Docker Stars](https://img.shields.io/docker/stars/circleci/python)](https://hub.docker.com/r/circleci/python)
-[[![Gem Version](https://badge.fury.io/rb/gemfury.svg)](https://badge.fury.io/rb/gemfury)
+[![Gem Version](https://badge.fury.io/rb/gemfury.svg)](https://badge.fury.io/rb/gemfury)
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/main.svg?style=svg&circle-token=cb047bd7bf65fea1735ff4c3e2ba11eaca838bb1)](https://dl.circleci.com/status-badge/redirect/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/main)
 
 
