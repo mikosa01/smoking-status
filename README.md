@@ -9,7 +9,7 @@
 [![GitHub](https://img.shields.io/github/license/mikosa01/smoking-status?nocache=1)](https://img.shields.io/github/license/mikosa01/smoking-status)
 ![contributors](https://img.shields.io/github/contributors/mikosa01/smoking-status) 
 ![codesize](https://img.shields.io/github/languages/code-size/mikosa01/smoking-status)
-[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)]
+[![Heroku](http://heroku-badge.herokuapp.com/?app=smoking-status&style=flat&svg=1&root=index.html)](https://dashboard.heroku.com/apps/smoking-status)
 [![Docker Stars](https://img.shields.io/docker/stars/circleci/python)](https://hub.docker.com/r/circleci/python)
 [![Gem Version](https://badge.fury.io/rb/gemfury.svg)](https://badge.fury.io/rb/gemfury)
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/main.svg?style=svg&circle-token=cb047bd7bf65fea1735ff4c3e2ba11eaca838bb1)](https://dl.circleci.com/status-badge/redirect/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/tree/main)
