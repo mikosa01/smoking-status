@@ -10,9 +10,9 @@
 ![contributors](https://img.shields.io/github/contributors/mikosa01/smoking-status) 
 ![codesize](https://img.shields.io/github/languages/code-size/mikosa01/smoking-status)
 [![Docker Stars](https://img.shields.io/docker/stars/circleci/python)](https://hub.docker.com/r/circleci/python)
-[![Gemfury](https://badge.fury.io/rb/mikosa.svg)](https://badge.fury.io/rb/mikosa)
-[![CircleCI](https://circleci.com/github/mikosa01/smoking-status.svg?style=svg&circle-token=CCIPAT_7arJxWcCDbNj5tqVoDUwbQ_1471c7d7937076c9b3f9ea5568ae12735e4f4d64
-](<LINK>)
+[[![Gem Version](https://badge.fury.io/rb/gemfury.svg)](https://badge.fury.io/rb/gemfury)
+[![CircleCI](https://circleci.com/gh/cci-ku2w/smoking-status.svg?style=svg&circle-token=CCIPAT_7arJxWcCDbNj5tqVoDUwbQ_1471c7d7937076c9b3f9ea5568ae12735e4f4d64)](https://app.circleci.com/pipelines/circleci/RmuisyccZh8TY1YJbNsVnC/UPd7uBaim6dy8SfXtVfuWq/165/workflows/818b72c8-f047-4c6a-94d1-a4fd42222070)
+
 
 
 
