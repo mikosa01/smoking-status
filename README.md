@@ -25,18 +25,22 @@ To run this project locally, follow these steps:
     git clone https://github.com/mikosa01/smoking-status.git
     cd smoking-status
 
-- Create Virtual Environment (Optional but Recommended):
-    `python -m venv venv`
-    `source venv/bin/activate ` 
-   On Windows:  
-     `venv\Scripts\activate`
+`Create Virtual Environment (Optional but Recommended):`
 
-- Install Dependencies in the various requirments text files:
-    `pip install -r requirements.txt`
+    python -m venv venv
+    source venv/bin/activate
+   
+   `On Windows: ` 
+    
+    venv\Scripts\activate`
 
-    This command will install all the required packages specified in the requirements.txt.
-    Note:
-    It's recommended to use a virtual environment to isolate project dependencies.
-    Ensure you have Python installed, preferably version 3.9.
+`Install Dependencies in the various requirments text files:`
+
+    pip install -r requirements.txt
+
+This command will install all the required packages specified in the requirements.txt.
+Note:
+It's recommended to use a virtual environment to isolate project dependencies.
+Ensure you have Python installed, preferably version 3.9.
 
 
