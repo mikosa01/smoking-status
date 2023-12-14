@@ -11,7 +11,7 @@ def test_make_prediction():
     subject = make_prediction(filename= single_test_json)
 
     assert subject is not None
-    assert isinstance(subject.get('prediction')[0], int)
+    assert isinstance(subject.get('prediction')[0], float)
     assert len(set(subject.get('prediction'))) == 2
 
 def test_make_multiple_predictions():
