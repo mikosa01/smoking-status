@@ -6,13 +6,13 @@ from classification.processing.data_management import load_data
 def test_make_prediction(): 
 
     test_data = load_data(file_name= 'test.csv')
-    single_test_json = test_data[0:1]
+    single_test_json = test_data[0:10]
 
     subject = make_prediction(filename= single_test_json)
 
     assert subject is not None
-    assert isinstance(subject.get('prediction')[0], float)
-    assert math.ceil(subject.get('prediction')[0]) == 1
+    assert subject.get('prediction')[0] == 1
+    assert len(set(subject.get('prediction'))) == 2
 
 def test_make_multiple_predictions():
     
