@@ -12,6 +12,6 @@ smoke_status = Pipeline(
         ('LogTransformation', pp.LogTransformation(variable = config.CONTINOUS_VARS)), 
         ('NumericalImputer', pp.NumericImputer(variable= config.FEATURES)), 
         ('MinMaxScaler', MinMaxScaler()), 
-        (config.MODEL_NAME, knn(n_neighbors= 2))
+        (config.MODEL_NAME, knn(n_neighbors= 5))
     ]
 )

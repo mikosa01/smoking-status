@@ -182,8 +182,8 @@ workflows:
       - build_push_docker_heroku:
           requires:
             - train_upload_classification_model
-          # filters:
-          #   branches: 
-          #     only: 
-          #       - master
+          filters:
+            branches: 
+              only: 
+                - master
           
