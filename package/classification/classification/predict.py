@@ -16,8 +16,8 @@ def make_prediction(*, filename:t.Union[pd.DataFrame, dict]) -> dict:
     data = pd.DataFrame(filename)
     validate_data= validate_input(input_data= data)
     predictions = smoke_pipe.predict(validate_data[config.FEATURES])
-    output = np.exp(predictions)
-    response = {'prediction': output, "version":version}
+    # output = np.exp(predictions)
+    response = {'prediction': predictions, "version":version}
     _logger.info(
         f'Making prediction with model version: {version}'
         f'Inputs: {validate_input}'
