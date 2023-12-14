@@ -10,7 +10,8 @@
 ![contributors](https://img.shields.io/github/contributors/mikosa01/smoking-status) 
 ![codesize](https://img.shields.io/github/languages/code-size/mikosa01/smoking-status)
 [![Docker Stars](https://img.shields.io/docker/stars/circleci/python)](https://hub.docker.com/r/circleci/python)
-![CircleCI](https://circleci.com/gh/michaelmerry8@gmail.com/smoking-status.svg?style=shield)
+[![Gemfury](https://badge.fury.io/rb/mikosa.svg)](https://badge.fury.io/rb/mikosa)
+![CircleCI](https://circleci.com/gh/mikosa01/smoking-status.svg?style=shield)
 
 
 
