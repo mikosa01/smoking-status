@@ -18,11 +18,11 @@
     The primary goal of this project is to develop a robust predictive model for determining smoking status based on relevant features. Additionally, the project aims to deploy the model for real-time predictions, providing a practical tool for assessing smoking behavior.
 
 ## Installation and Setup
-    To run this project locally, follow these steps:
+To run this project locally, follow these steps:
 
 - Clone the Repository:
-    `git clone https://github.com/mikosa01/smoking-status.git`
-    `cd smoking-status`
+    git clone https://github.com/mikosa01/smoking-status.git
+    cd smoking-status
 
 - Create Virtual Environment (Optional but Recommended):
     `python -m venv venv`
