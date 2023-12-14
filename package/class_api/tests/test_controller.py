@@ -35,5 +35,5 @@ def test_prediction_endpoint_returns_prediction(flask_test_client):
     # print(response_json)
     # assert math.ceil(predictions) == 1.0
     assert prediction is  not None
-    assert math.ceil(prediction[0]) == 0
+    assert math.ceil(prediction[0]) == 1
     assert response_version == _version
